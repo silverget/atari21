@@ -1,10 +1,10 @@
 dechets = 0
 effects.star_field.start_screen_effect()
-scene.set_background_color(10)
+scene.set_background_color(11)
 tiles.set_tilemap(tilemap("""
     niveau1
 """))
-my_sprite = sprites.create(img("""
+heros = sprites.create(img("""
         ........................
             ........................
             ........................
@@ -31,3 +31,6 @@ my_sprite = sprites.create(img("""
             ........................
     """),
     0)
+heros.set_stay_in_screen(True)
+heros.y = 100
+

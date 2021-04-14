@@ -1,3 +1,4 @@
+let mySprite: Sprite = null
 let dechets = 0
 effects.starField.startScreenEffect()
 scene.setBackgroundColor(11)
@@ -30,3 +31,4 @@ let heros = sprites.create(img`
     `, 0)
 heros.setStayInScreen(true)
 heros.y = 100
+controller.moveSprite(mySprite)
