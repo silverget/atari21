@@ -1,8 +1,34 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    projectile = sprites.createProjectileFromSprite(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . 3 3 3 3 . . . . . 
+        . . . . . . . 3 3 3 . . . . . . 
+        . . . . . . 3 3 3 3 3 . . . . . 
+        . . . . . 3 3 3 3 3 3 . . . . . 
+        . . . . . . . 3 3 3 3 . . . . . 
+        . . . . . . . 3 . 3 3 3 . . . . 
+        . . . . . . . 3 . 3 3 3 . . . . 
+        . . . . . . . 3 3 3 3 3 3 . . . 
+        . . . . . . . 3 . . . 3 3 . . . 
+        . . . . . . . 3 . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, heros, 0, -50)
+    projectile.startEffect(effects.coolRadial)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+	
+})
+let projectile: Sprite = null
+let heros: Sprite = null
 let dechets: number[] = []
 effects.starField.startScreenEffect()
 scene.setBackgroundColor(11)
 tiles.setTilemap(tilemap`niveau1`)
-let heros = sprites.create(img`
+heros = sprites.create(img`
     ........................
     ........................
     ........................
