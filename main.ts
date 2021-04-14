@@ -1,5 +1,4 @@
-let mySprite: Sprite = null
-let dechets = 0
+let dechets: number[] = []
 effects.starField.startScreenEffect()
 scene.setBackgroundColor(11)
 tiles.setTilemap(tilemap`niveau1`)
@@ -31,4 +30,5 @@ let heros = sprites.create(img`
     `, 0)
 heros.setStayInScreen(true)
 heros.y = 100
-controller.moveSprite(mySprite)
+controller.moveSprite(heros, 100, 100)
+info.setLife(3)

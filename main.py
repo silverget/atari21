@@ -1,4 +1,4 @@
-dechets = 0
+dechets: List[number] = []
 effects.star_field.start_screen_effect()
 scene.set_background_color(11)
 tiles.set_tilemap(tilemap("""
@@ -33,4 +33,5 @@ heros = sprites.create(img("""
     0)
 heros.set_stay_in_screen(True)
 heros.y = 100
-
+controller.move_sprite(heros, 100, 100)
+info.set_life(3)
